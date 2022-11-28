@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 
 use Illuminate\Database\Seeder;
-//use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 //use App\Model\UserTableSeeder;
-//use Illuminate\Support\Str;
+use Illuminate\Support\Str;
 
 
 class DatabaseSeeder extends Seeder
@@ -20,7 +20,9 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         
-        $this->call(UsersTableSeeder::class);
-        
-    }
+       $this->call(UsersTableSeeder::class);
+
+
+}
+    
 }
