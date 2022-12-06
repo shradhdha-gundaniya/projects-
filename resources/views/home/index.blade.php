@@ -3,22 +3,22 @@
 @section('title', 'Home page')
 
 @section('content')
-<h1>Hello world!</h1>
+<h1>Welcome to the laravel....!</h1>
 
-<div>
+<!-- <div>
 @for ($i = 0; $i < 10; $i++)
   <div>The current value is {{ $i }}</div>
 @endfor
-</div>
+</div> -->
 
-<div>
+<!-- <div>
   @php $done = false @endphp
   @while(!$done)
-    <div>I'm not done</div>
+    <div>I'm not done</div> -->
 
-    @php
+    <!-- @php
       if (random_int(0, 1) === 1) $done = true
     @endphp
   @endwhile
-</div>
+</div> -->
 @endsection

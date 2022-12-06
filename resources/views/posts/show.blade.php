@@ -6,7 +6,7 @@
 <h1>{{ $post->title }}</h1>
 <p>{{ $post->content }}</p>
 <p>Added {{ $post->created_at->diffForHumans() }}
-    by {{$post->user->name}}
+   {{-- by {{$post->user->name}}--}}
 </p>
 
 @if(now()->diffInMinutes($post->created_at) < 5)

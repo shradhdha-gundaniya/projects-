@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePost;
 use App\Models\BlogPost;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
