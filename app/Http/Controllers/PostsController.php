@@ -40,6 +40,8 @@ class PostsController extends Controller
         $validated = $request->validated();
         $post = BlogPost::create($validated);
 
+         dump($request->hasFile('thumbnail'));
+         die;
         $request->session()->flash('status', 'The blog post was created!');
 
         return redirect()->route('posts.show', ['post' => $post->id]);

@@ -9,7 +9,7 @@
    {{-- by {{$post->user->name}}--}}
 </p>
 
-@if(now()->diffInMinutes($post->created_at) < 5)
+@if(now()->diffInMinutes($post->created_at) < 10)
 <div class="alert alert-info">New!</div>
 @endif
 @endsection

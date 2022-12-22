@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             $this->command->info('Database was refreshed');
         }
         
-       $this->call(UsersTableSeeder::class);
+       $this->call(UsersTableSeeder::class,TagsSeeder::class);
 
 
 }

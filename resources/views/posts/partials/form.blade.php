@@ -2,13 +2,19 @@
     <label for="title">Title</label>
     <input id="title" type="text" name="title" class="form-control" value="{{ old('title', optional($post ?? null)->title) }}">
 </div>
-@error('title')
+<!-- @error('title')
     <div class="alert alert-danger">{{ $message }}</div>
-@enderror
+@enderror -->
 <div class="form-group">
     <label for="content">Content</label>
     <textarea class="form-control" id="content" name="content">{{ old('content', optional($post ?? null)->content) }}</textarea>
 </div>
+
+<div class="form-group">
+    <label>Thumbnail</label></br>
+    <input  type="file" name="thumbnail" class="form-control-file"/>
+</div>
+
 @if($errors->any())
     <div class="mb-3">
         <ul class="list-group">

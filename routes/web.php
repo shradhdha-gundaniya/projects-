@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\PostsTagController;
 use Illuminate\Http\Request;
 
 /*
@@ -38,6 +39,7 @@ Route::get('/contact', [HomeController::class, 'contact'])
   ->name('home.contact');
 
 Route::get('/single', AboutController::class);
+Route::get('/posts/tag/{id}',[App\Http\Controllers\PostTagController::class, 'index'])->name('posts.tags.index');
 
 $posts = [
   1 => [
@@ -77,6 +79,9 @@ Route::resource('posts', PostsController::class);
 //   //     'id' => '[0-9]+'
 //   // ])
 //   ->name('posts.show');
+
+
+
 
 Route::get('/recent-posts/{days_ago?}', function ($daysAgo = 20) {
   return 'Posts from ' . $daysAgo . ' days ago';
